@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 
 const agents = [
   { id: "AGT-001", name: "Beacon-1", status: "Active", lastSeen: "2m ago", type: "HTTP" },
