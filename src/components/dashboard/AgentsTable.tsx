@@ -27,13 +27,14 @@ export const AgentsTable = () => {
               <TableCell>{agent.name}</TableCell>
               <TableCell>
                 <span
-                  className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                  className={cn(
+                    "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium",
                     agent.status === "Active"
                       ? "bg-green-500/10 text-green-500"
                       : agent.status === "Idle"
                       ? "bg-yellow-500/10 text-yellow-500"
                       : "bg-red-500/10 text-red-500"
-                  }`}
+                  )}
                 >
                   {agent.status}
                 </span>
