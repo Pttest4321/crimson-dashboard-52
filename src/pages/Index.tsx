@@ -8,11 +8,11 @@ import { AgentsTable } from "@/components/dashboard/AgentsTable";
 const Index = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full">
-        <DashboardSidebar />
-        <div className="flex-1">
-          <Header />
-          <main className="p-6 space-y-6">
+      <div className="min-h-screen flex flex-col w-full">
+        <Header />
+        <div className="flex flex-1">
+          <DashboardSidebar />
+          <main className="flex-1 p-6 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <StatsCard
                 title="Active Agents"
