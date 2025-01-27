@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Overview{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-panel p-6 rounded-lg">
+            <div class="flex items-start justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Active Agents</p>
+                    <p class="text-2xl font-semibold mt-1">12</p>
+                    <p class="text-xs mt-1 text-green-500">+8% from last week</p>
+                </div>
+                <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                    <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel p-6 rounded-lg">
+            <div class="flex items-start justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Active Listeners</p>
+                    <p class="text-2xl font-semibold mt-1">4</p>
+                    <p class="text-xs mt-1 text-green-500">+2% from last week</p>
+                </div>
+                <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                    <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel p-6 rounded-lg">
+            <div class="flex items-start justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Operations</p>
+                    <p class="text-2xl font-semibold mt-1">3</p>
+                    <p class="text-xs mt-1 text-green-500">+1% from last week</p>
+                </div>
+                <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                    <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel p-6 rounded-lg">
+            <div class="flex items-start justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Network Traffic</p>
+                    <p class="text-2xl font-semibold mt-1">1.2 GB</p>
+                    <p class="text-xs mt-1 text-red-500">-5% from last week</p>
+                </div>
+                <div class="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                    <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agents Table -->
+    <div class="space-y-4">
+        <h2 class="text-lg font-semibold">Active Agents</h2>
+        <div class="glass-panel rounded-lg">
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Agent ID</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Seen</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap font-mono">AGT-001</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Beacon-1</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                Active
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-gray-500">2m ago</td>
+                        <td class="px-6 py-4 whitespace-nowrap">HTTP</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap font-mono">AGT-002</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Beacon-2</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                Idle
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-gray-500">5m ago</td>
+                        <td class="px-6 py-4 whitespace-nowrap">DNS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
