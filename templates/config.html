@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Configuration{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">Configuration</h1>
+    
+    <div class="glass-panel rounded-lg p-6">
+        <form class="space-y-6">
+            <!-- Exfiltration Settings -->
+            <div>
+                <h3 class="text-lg font-medium mb-4">Exfiltration Settings</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Screenshot Interval</label>
+                        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm rounded-md">
+                            <option>Every 5 minutes</option>
+                            <option>Every 15 minutes</option>
+                            <option>Every 30 minutes</option>
+                            <option>Every hour</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Data Upload Frequency</label>
+                        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm rounded-md">
+                            <option>Real-time</option>
+                            <option>Every 5 minutes</option>
+                            <option>Every 15 minutes</option>
+                            <option>Every 30 minutes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proxy Settings -->
+            <div>
+                <h3 class="text-lg font-medium mb-4">Proxy Settings</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Proxy Host</label>
+                        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Proxy Port</label>
+                        <input type="number" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Encryption Settings -->
+            <div>
+                <h3 class="text-lg font-medium mb-4">Encryption Settings</h3>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Encryption Key</label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                        <input type="password" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-l-md focus:ring-purple-500 focus:border-purple-500 sm:text-sm border-gray-300">
+                        <button type="button" class="inline-flex items-center px-3 py-2 border border-l-0 border-gray-300 rounded-r-md bg-gray-50 text-gray-500 text-sm">
+                            Generate
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end">
+                <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">
+                    Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

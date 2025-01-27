@@ -10,13 +10,17 @@ def index():
 def agents():
     return render_template('agents.html')
 
-@app.route('/listeners')
-def listeners():
-    return render_template('listeners.html')
+@app.route('/tasks')
+def tasks():
+    return render_template('tasks.html')
 
-@app.route('/operations')
-def operations():
-    return render_template('operations.html')
+@app.route('/data')
+def data():
+    return render_template('data.html')
+
+@app.route('/config')
+def config():
+    return render_template('config.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

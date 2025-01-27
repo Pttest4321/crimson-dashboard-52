@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Data Dashboard{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">Data Dashboard</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Statistics -->
+        <div class="glass-panel rounded-lg p-6">
+            <h3 class="text-lg font-medium mb-4">Collected Data</h3>
+            <dl class="space-y-4">
+                <div>
+                    <dt class="text-sm text-gray-500">Screenshots</dt>
+                    <dd class="text-2xl font-semibold">247</dd>
+                </div>
+                <div>
+                    <dt class="text-sm text-gray-500">Form Entries</dt>
+                    <dd class="text-2xl font-semibold">152</dd>
+                </div>
+                <div>
+                    <dt class="text-sm text-gray-500">Clipboard Items</dt>
+                    <dd class="text-2xl font-semibold">89</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="glass-panel rounded-lg p-6 col-span-2">
+            <h3 class="text-lg font-medium mb-4">Recent Activity</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-md border border-gray-200">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="font-medium">Screenshot Captured</p>
+                            <p class="text-sm text-gray-500">From AGT-001</p>
+                        </div>
+                        <span class="text-sm text-gray-500">2m ago</span>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-md border border-gray-200">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="font-medium">Form Data Collected</p>
+                            <p class="text-sm text-gray-500">From AGT-002</p>
+                        </div>
+                        <span class="text-sm text-gray-500">5m ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
